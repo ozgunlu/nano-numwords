@@ -1,0 +1,16 @@
+name: CI
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python app_min.py "seven hundred eighty six" | grep -q '^786$'
+      - run: python app_min.py "two million" | grep -q '^2000000$'
+      - run: python app_min.py "one trillion" | grep -q '^1000000000000$'
+      - run: python app_min.py "negative forty two" | grep -q '^-42$'
+      - run: python app_min.py "one point five six" | grep -q '^1.56$'
