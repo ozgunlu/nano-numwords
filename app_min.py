@@ -21,4 +21,9 @@ def n(x):
       else: v=0
     G+=v; i+=1
   return s*(T+G)
-if __name__=="__main__": print(n(" ".join(sys.argv[1:])))
+
+def main():
+  print(n(" ".join(sys.argv[1:])))
+
+if __name__=="__main__":
+  main()
