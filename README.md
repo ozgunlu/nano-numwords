@@ -20,7 +20,7 @@ Zero dependencies. Single ~1KB file. Perfect for code-golf, minimal environments
 
 ## 🚀 Usage
 ```bash
-# CLI
+# Local (from repo)
 python app_min.py "seven hundred eighty six"              # 786
 python app_min.py "two million"                           # 2000000
 python app_min.py "one trillion"                          # 1000000000000
@@ -29,9 +29,10 @@ python app_min.py "negative forty two"                    # -42
 python app_min.py "one point zero zero five"              # 1.005
 ```
 
-or, after installing:
+After installing:
 
 ```bash
+# CLI
 pip install nano-numwords
 nano-numwords "forty two"   # -> 42
 ```
